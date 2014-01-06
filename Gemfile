@@ -112,6 +112,8 @@ group :development do
 group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails', '~> 2.4'
+  gem 'rspec_api_documentation'
+  gem 'apitome', github: 'modeset/apitome'
   gem 'listen'
   gem 'terminal-notifier-guard'
   gem 'growl', require: false

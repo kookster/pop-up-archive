@@ -1,0 +1,31 @@
+{
+  "resource": "Items",
+  "http_method": "GET",
+  "route": "/api/items",
+  "description": "Get a list of items",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/api/items",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"items\":[]}",
+      "response_headers": {"Content-Type":"application/json; charset=utf-8","X-UA-Compatible":"IE=Edge,chrome=1","ETag":"\"52f30c97cbacaf796aed3ba46af9737b\"","Cache-Control":"max-age=0, private, must-revalidate","X-Request-Id":"ae65c34db876c25439af79a1d8e7a147","X-Runtime":"0.301304","Content-Length":"12"},
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+}
+  ]
+}
