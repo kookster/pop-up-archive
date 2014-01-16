@@ -89,6 +89,8 @@ gem 'redis-rails'
 
 gem 'jplayer-rails'
 
+gem 'swagger-docs'
+
 group :assets do
   gem 'sprockets'
   gem 'sass-rails', '~> 3.2.3'
@@ -107,7 +109,7 @@ group :development do
   gem 'guard-rspec'
   gem 'guard-jasmine'
   gem "guard-bundler", ">= 1.0.0"
- end
+   end
 
 group :development, :test do
   gem 'pry-rails'
