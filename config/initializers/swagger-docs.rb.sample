@@ -1,0 +1,33 @@
+# NOTE_TWC: The addition of the below class declaration is based on the 
+# 'Inheriting from a custom API controller' section on the swagger-docs Github page
+# https://github.com/richhollis/swagger-docs which states:
+# "By default swagger-docs is applied to controllers inheriting from ApplicationController. 
+# If this is not the case for your application, use this snippet in your initializer before 
+# calling Swagger::Docs::Config#register_apis(...)."
+class Swagger::Docs::Config
+  # NOTE_TWC: I wasn't sure which Api BaseController to used, so tried them both
+  def self.base_api_controller; Api::V1::BaseController end
+  #def self.base_api_controller; Api::BaseController end
+end
+
+Swagger::Docs::Config.register_apis({
+  "1.0" => {
+    # NOTE_TWC: The 'controller_base_path was used prior to the 0.0.3 
+    # release of swagger-docs
+    # There is a github ticket that mentions the issue we are having
+    # but I wasn't sure how to resolve it in our case. See the last comment 
+    # https://github.com/richhollis/swagger-docs/issues/5
+    #:controller_base_path => "api/",
+    
+    # NOTE_TWC: changed to api-docs from the default due to our API using api/
+    # the output location where your .json files are written to
+    :api_file_path => "public/api-docs/v1/", 
+
+    # NOTE_TWC: Left my base path in here so you could see what I was using.
+    # the URL base path to your API 
+    :base_path => "http://pop-up-archive.dev:88/api", 
+    
+    # if you want to delete all .json files at each generation
+    :clean_directory => false 
+  }
+})
